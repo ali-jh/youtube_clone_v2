@@ -1,9 +1,24 @@
-import React from 'react'
+import { Stack } from "@mui/material";
+import { Link } from "react-router-dom";
 
-const Navbar = () => {
-  return (
-    <div>Navbar</div>
-  )
-}
+import {logo}from "../utils/constants";
 
-export default Navbar
+const Navbar = () => (
+  <Stack
+    direction="row"
+    p={2}
+    alignItems="center"
+    sx={{
+      background: "#000",
+      position: "sticky",
+      top: 0,
+      justifyContent: "space-between",
+    }}
+  >
+    <Link to="/">
+      <img src={logo} alt="logo" height={45} />
+    </Link>
+  </Stack>
+);
+
+export default Navbar;
